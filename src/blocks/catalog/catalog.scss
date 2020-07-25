@@ -1,0 +1,31 @@
+.catalog {
+  padding: 40px 15px 40px 15px;
+}
+
+.catalog__title {
+  margin-bottom: 19px;
+}
+
+.catalog__desc {
+  margin-bottom: 32px;
+}
+
+.catalog__tabs {
+  margin-bottom: 52px;
+}
+
+.catalog__list {
+  @include list-reset;
+  margin-bottom: 40px;
+}
+
+.catalog__item {
+  &:not(:last-child) {
+    margin-bottom: 35px;
+  }
+}
+
+.catalog__button {
+  max-width: 205px;
+  margin: 0 auto;
+}

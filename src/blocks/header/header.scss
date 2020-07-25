@@ -1,0 +1,64 @@
+.header {
+  width: 100%;
+  padding: 23px 18px;
+}
+
+.header__text {
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 14px;
+  color: #ffffff;
+
+  &:not(:last-child) {
+    margin-bottom: 9px;
+  }
+}
+
+.header__info {
+  position: relative;
+  margin-bottom: 29px;
+  padding-left: 41px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    width: 27px;
+    height: 19px;
+    background-image: url("../../img/box.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transform: translateY(-50%);
+  }
+}
+
+.header__work {
+  margin-bottom: 14px;
+  font-size: 13px;
+  line-height: 15px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.header__phone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+  color: #ffffff;
+  letter-spacing: 0.03em;
+
+  &::before {
+    @include pseudo;
+    width: 16px;
+    height: 16px;
+    margin-right: 14px;
+    background-image: url("../../img/phone.png");
+    background-size: contain;
+  }
+}

@@ -1,0 +1,27 @@
+.tab {
+  @include list-reset;
+}
+
+.tab__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #868ca5;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: #eff1f7;
+  border-radius: 5px;
+
+  &:not(:last-child) {
+    margin-bottom: 12px;
+  }
+
+  &--active {
+    color: #3b3640;
+    background: linear-gradient(180deg, #ffde8d 0%, #fad26f 100%);
+  }
+}

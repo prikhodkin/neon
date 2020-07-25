@@ -1,0 +1,23 @@
+.more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  min-height: 55px;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  color: rgba(59, 54, 64, 0.62);
+  letter-spacing: 0.03em;
+  border: 1.5px solid rgba(59, 54, 64, 0.24);
+  border-radius: 10px;
+
+  &::after {
+    @include pseudo;
+    width: 19px;
+    height: 19px;
+    margin-left: 12px;
+    background-image: url("../../img/load.png");
+    background-size: contain;
+  }
+}

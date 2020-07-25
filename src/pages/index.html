@@ -7,10 +7,9 @@
   <title>Template</title>
   @@include('../blocks/favicon/favicon.html')
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/index.css">
 </head>
-<body>
-<header class="header">
+<body class="page">
+<header class="page__header header">
   <nav class="header__menu menu">
     <button class="menu__button">
       <span class="menu__hamburger">Открыть меню</span>
@@ -21,7 +20,7 @@
     </ul>
   </nav>
   <div class="header__info">
-    <p class="header__text">Доставка геолографических аксессуаров по России</p>
+    <p class="header__text">Доставка голографических аксессуаров по России</p>
     <p class="header__text">В наличии на складе в Екатеринбурге</p>
   </div>
   <p class="header__work">Пн-Пт с 10.00 до 19.00</p>
@@ -29,11 +28,13 @@
 </header>
   <main>
     <section class="promo">
-      <h1 class="promo__title">Голографические рюкзаки и сумки - <span>ХАМЕЛЕОНЫ</span></h1>
+      <h1 class="promo__title">ГОЛОГРАФИЧЕСКИЕ РЮКЗАКИ И СУМКИ - <span>ХАМЕЛЕОНЫ</span></h1>
       <p class="promo__desc">Неоновый рюкзак-хамелон - это вместительный и ультрамодный тренд 2020 года. Благодаря светоотражающим пластинам рюкзак будет ярко выделяться и станет незаменимым предметом гардероба.</p>
-      <img class="promo__bg" src="../img/promo__img.png">
+      <div class="promo__bg"></div>
       <a href="javascript://" class="promo__button button button--dark">
-        <span class="button__text">Перейти в каталог</span>
+        <div class="button__bg">
+          <span class="button__text">Перейти в каталог</span>
+        </div>
       </a>
       <ul class="promo__list">
         <li class="promo__item">
@@ -85,55 +86,61 @@
     <section class="catalog">
       <h2 class="catalog__title title">удивите всех своим необычным видом</h2>
       <p class="catalog__desc text">Все модели всегда в наличии на складе</p>
-      <ul class="catalog__tabs tabs">
-        <li class="tab">Рюкзаки</li>
-        <li class="tab">Сумки и клатчи</li>
-        <li class="tab">Кошельки</li>
-        <li class="tab">все аксессуары</li>
+      <ul class="catalog__tabs tab">
+        <li class="tab__item tab__item--active">Рюкзаки</li>
+        <li class="tab__item">Сумки и клатчи</li>
+        <li class="tab__item">Кошельки</li>
+        <li class="tab__item">все аксессуары</li>
       </ul>
       <div class="catalog__content">
-        <ul class="catalog__list products">
-          <li class="products__item">
+        <ul class="catalog__list ">
+          <li class="catalog__item products">
             <span class="products__flag">Новинка</span>
             <a href="#" class="products__img">
               <img src="../img/promo__item--01.png">
             </a>
             <a href="#" class="products__name">Городской рюкзак “Signature”</a>
-            <p class="products__info"><span>Размер кондиционеров:</span>35x20x43</p>
-            <p class="products__info"><span>Материал:</span>Полиуретан/Нейлон</p>
+            <p class="products__info"><span>Размер кондиционеров:</span> 35x20x43</p>
+            <p class="products__info"><span>Материал:</span> Полиуретан/Нейлон</p>
             <div class="products__prices">
               <span class="products__old-price">2 990 ₽ </span>
               <span class="products__price">2 390 ₽ </span>
             </div>
-            <a href="#" class="products__button button">Оформить заказ<br> со скидкой</a>
+            <a href="#" class="products__button button">
+              <div class="button__bg">Оформить заказ<br> со скидкой</div>
+            </a>
           </li>
-          <li class="products__item">
-            <span class="products__flag">Новинка</span>
+          <li class="catalog__item products">
+            <span class="products__flag products__flag--sale">-20%</span>
             <a href="#" class="products__img">
               <img src="../img/promo__item--01.png">
             </a>
             <a href="#" class="products__name">Городской рюкзак “Signature”</a>
-            <p class="products__info"><span>Размер кондиционеров:</span>35x20x43</p>
-            <p class="products__info"><span>Материал:</span>Полиуретан/Нейлон</p>
+            <p class="products__info"><span>Размер кондиционеров:</span> 35x20x43</p>
+            <p class="products__info"><span>Материал:</span> Полиуретан/Нейлон</p>
             <div class="products__prices">
               <span class="products__old-price">2 990 ₽ </span>
               <span class="products__price">2 390 ₽ </span>
             </div>
-            <a href="#" class="products__button button">Оформить заказ<br> со скидкой</a>
+            <a href="#" class="products__button button">
+              <div class="button__bg">Оформить заказ<br> со скидкой</div>
+            </a>
           </li>
-          <li class="products__item">
+          <li class="catalog__item products">
             <span class="products__flag">Новинка</span>
             <a href="#" class="products__img">
               <img src="../img/promo__item--01.png">
             </a>
             <a href="#" class="products__name">Городской рюкзак “Signature”</a>
-            <p class="products__info"><span>Размер кондиционеров:</span>35x20x43</p>
-            <p class="products__info"><span>Материал:</span>Полиуретан/Нейлон</p>
+            <p class="products__info"><span>Размер кондиционеров:</span> 35x20x43</p>
+            <p class="products__info"><span>Материал:</span> Полиуретан/Нейлон</p>
             <div class="products__prices">
               <span class="products__old-price">2 990 ₽ </span>
               <span class="products__price">2 390 ₽ </span>
             </div>
-            <a href="#" class="products__button button">Оформить заказ<br> со скидкой</a>
+            <a href="#" class="products__button button">
+              <div class="button__bg">Оформить заказ<br> со скидкой</div>
+            </a>
           </li>
         </ul>
       </div>
