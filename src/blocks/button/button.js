@@ -1,4 +1,4 @@
-modules.define('example', ['i-bem-dom'], function(provide, bemDom) {
+modules.define('button', ['i-bem-dom'], function(provide, bemDom) {
 
 provide(bemDom.declBlock(this.name, {
     onSetMod: {

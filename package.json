@@ -14,6 +14,7 @@
     "@babel/plugin-proposal-class-properties": "^7.10.1",
     "@babel/preset-env": "^7.10.2",
     "@babel/register": "^7.10.1",
+    "@htmlacademy/editorconfig-cli": "^1.0.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^8.1.0",
     "babel-preset-env": "^1.7.0",
@@ -58,11 +59,22 @@
     "stylelint-order-htmlacademy": "^1.0.1",
     "stylelint-scss": "^3.17.2"
   },
+  "editorconfig-cli": [
+    "*.json",
+    "*.js",
+    "src/pages/**/*.html",
+    "src/js/**/*.js",
+    "src/img/**/*.svg",
+    "src/blocks/**/*.scss"
+  ],
   "scripts": {
     "dev": "gulp dev",
     "build": "gulp build",
     "deploy": "gulp deploy",
+    "editorconfig": "editorconfig-cli",
+    "stylelint": "stylelint \"src/blocks/**/*.scss\" --syntax scss",
     "fix": "stylelint src/blocks/**/*.scss --fix",
-    "bitrix": "gulp bitrix"
+    "bitrix": "gulp bitrix",
+    "test": "npm run editorconfig && npm run stylelint"
   }
 }
