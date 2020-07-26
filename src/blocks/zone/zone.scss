@@ -1,0 +1,51 @@
+.zone__title {
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 23px;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.zone__list {
+  @include list-reset;
+}
+
+.zone__item {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 23px;
+  color: #000000;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &::before {
+    @include pseudo;
+    min-width: 40px;
+    height: 40px;
+    margin-right: 16px;
+    border-radius: 50%;
+  }
+
+  &--free {
+    &::before {
+      background: #93da68;
+    }
+  }
+
+  &--city {
+    &::before {
+      background: #fce978;
+    }
+  }
+
+  &--suburb {
+    &::before {
+      background: #d96c52;
+    }
+  }
+}

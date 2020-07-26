@@ -1,0 +1,137 @@
+.reviews {
+  padding: 65px 15px 45px 15px;
+  border-bottom: 1px solid #cdcdcd;
+}
+
+.reviews__title {
+  margin-bottom: 23px;
+  font-size: 24px;
+}
+
+.reviews__desc {
+  margin-bottom: 6px;
+}
+
+.reviews__inst {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 45px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #862af4;
+
+  &::before {
+    @include pseudo;
+    width: 20px;
+    height: 20px;
+    margin-right: 18px;
+    background-image: url("../../img/instagramm.png");
+    background-size: contain;
+  }
+
+  span {
+    position: relative;
+
+    &::after {
+      @include pseudo;
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      border-bottom: 1px solid #862af4;
+    }
+  }
+}
+
+.reviews__list {
+  @include list-reset;
+}
+
+.reviews__content {
+  padding: 96px 15px 40px 15px;
+  background-image: url("../../img/reviews__bg.png");
+  // background-color: #EFF1F7;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  border-radius: 0 0 10px 10px;
+}
+
+.reviews__img {
+  display: block;
+  width: 60%;
+  margin: 60px auto 30px auto;
+}
+
+.reviews__author {
+  display: flex;
+  align-items: center;
+  margin-bottom: 36px;
+}
+
+.reviews__avatar {
+  width: 70px;
+  margin-right: 17px;
+}
+
+.reviews__theme {
+  margin-bottom: 15px;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 22px;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.reviews__body {
+  margin-bottom: 36px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+
+  p {
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.reviews__button {
+  @include pseudo;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 43px;
+  height: 43px;
+  margin: 0 12px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  appearance: none;
+
+  svg {
+    width: 8px;
+    height: 14px;
+    stroke: #9060dd;
+  }
+
+  &--active {
+    background: linear-gradient(180deg, #b487ec 0%, #6c19aa 100%);
+
+    svg {
+      stroke: #ffffff;
+    }
+  }
+}
+
+.reviews__control {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}

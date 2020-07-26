@@ -1,0 +1,17 @@
+.link {
+  position: relative;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  color: #b88cfd;
+
+  &::before {
+    @include pseudo;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed #b88cfd;
+  }
+}

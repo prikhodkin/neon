@@ -1,5 +1,6 @@
 .catalog {
   padding: 40px 15px 40px 15px;
+  background-color: #fcfcfc;
 }
 
 .catalog__title {
@@ -17,6 +18,18 @@
 .catalog__list {
   @include list-reset;
   margin-bottom: 40px;
+
+  &--hide {
+    .catalog__item {
+      &:nth-child(1n + 4) {
+        display: none;
+      }
+    }
+  }
+
+  &--hide + .catalog__button {
+    display: flex;
+  }
 }
 
 .catalog__item {
@@ -26,6 +39,15 @@
 }
 
 .catalog__button {
+  display: none;
   max-width: 205px;
   margin: 0 auto;
+}
+
+.catalog__content {
+  display: none;
+
+  &--show {
+    display: block;
+  }
 }
