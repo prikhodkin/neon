@@ -75,6 +75,7 @@
     "stylelint": "stylelint \"src/blocks/**/*.scss\" --syntax scss",
     "fix": "stylelint src/blocks/**/*.scss --fix",
     "bitrix": "gulp bitrix",
+    "deploy:server": "gulp deploy:server",
     "test": "npm run editorconfig && npm run stylelint"
   }
 }

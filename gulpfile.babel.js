@@ -30,6 +30,11 @@ gulp.task('bitrix',
   gulp.series('build', 'bitrix:cc')
 );
 
+// Копирование файлов в директорию
+gulp.task('deploy:server',
+  gulp.series('build', 'deploy:serv')
+);
+
 // Деплой на GH-Pages
 export const deploy = (cb) => {
   ghPages.publish(path.join(process.cwd(), './dist'), cb);

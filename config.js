@@ -53,6 +53,10 @@ const paths = {
   bitrix: {
     src: "../www/local/templates/mobile_app/assets/",
     clean: "./dist/**"
+  },
+  deploy: {
+    dest: "../www/",
+    src: "./dist/**"
   }
 };
 
