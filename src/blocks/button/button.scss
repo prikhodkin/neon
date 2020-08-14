@@ -4,6 +4,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  padding: 0;
   font-weight: 600;
   font-size: 13px;
   line-height: 24px;
@@ -13,6 +14,7 @@
   letter-spacing: 0.03em;
   border: none;
   border-radius: 5px 5px 15px 15px;
+  cursor: pointer;
   appearance: none;
 
 
@@ -90,5 +92,14 @@
 @media (min-width: $tablet-width) {
   .button__text {
     font-size: 13px;
+    transition: all 0.3s;
+  }
+
+  .button {
+    transition: all 0.3s;
+
+    &:hover {
+      transform: scale(1.06);
+    }
   }
 }

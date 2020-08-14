@@ -1,0 +1,17 @@
+.social {
+  @include list-reset;
+  display: flex;
+  align-items: center;
+}
+
+.social__item {
+  &:not(:last-child) {
+    margin-right: 11px;
+  }
+
+  svg {
+    width: 18px;
+    height: 18px;
+    fill: #ffffff;
+  }
+}

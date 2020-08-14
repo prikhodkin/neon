@@ -90,3 +90,35 @@
   text-align: center;
   letter-spacing: 0.03em;
 }
+
+@media (min-width: 768px) {
+  .advantages__list {
+    display: flex;
+  }
+}
+
+@media (min-width: 1200px) {
+  .advantages {
+    @include page-wrapper;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-image: url("../../img/advantages__bg.png");
+    background-repeat: no-repeat;
+    background-position: left;
+  }
+
+  .advantages__title {
+    max-width: 757px;
+    margin: 0 auto;
+    margin-bottom: 62px;
+  }
+
+  .advantages__list {
+    justify-content: space-between;
+  }
+
+
+  .advantages__item {
+    max-width: 325px;
+  }
+}

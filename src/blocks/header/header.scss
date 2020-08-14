@@ -62,3 +62,47 @@
     background-size: contain;
   }
 }
+
+@media (min-width: 768px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header {
+    @include page-wrapper;
+    justify-content: flex-start;
+    padding-top: 40px;
+  }
+
+  .header__text {
+    font-size: 13px;
+
+    &:not(:last-child) {
+      margin-bottom: 9px;
+    }
+  }
+
+  .header__work {
+    margin: 0;
+    margin-left: 125px;
+  }
+
+  .header__menu {
+    display: block;
+  }
+
+  .header__phone {
+    margin-left: auto;
+
+    &::before {
+      width: 35px;
+      height: 35px;
+      margin-right: 25px;
+      background-image: url("../../img/phone-header.png");
+    }
+  }
+}

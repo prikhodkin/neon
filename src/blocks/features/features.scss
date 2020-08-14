@@ -60,3 +60,59 @@
     margin-bottom: 57px;
   }
 }
+
+@media (min-width: 768px) {
+  .features {
+    padding-top: 170px;
+    padding-bottom: 130px;
+
+    &::before {
+      height: 120px;
+      background-image: url("../../img/features__before-desk.png");
+    }
+  }
+
+  .features__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .features__item {
+    width: 32%;
+
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .features {
+    @include page-wrapper;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -39px;
+      left: 100px;
+      display: block;
+      width: 77px;
+      height: 77px;
+      background-image: url("../../img/rec.png");
+    }
+  }
+
+  .features__item {
+    width: 370px;
+  }
+
+  .features__text {
+    width: 300px;
+  }
+
+  .features__img {
+    height: 210px;
+  }
+}

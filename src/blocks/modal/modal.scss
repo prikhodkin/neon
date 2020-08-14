@@ -1,0 +1,133 @@
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 110;
+  width: 100%;
+  background-image: url("../../img/modal__bg.png");
+  background-size: cover;
+
+  &--order {
+    display: none;
+    border-radius: 10px;
+
+    .modal__inner {
+      padding-top: 50px;
+    }
+  }
+
+  &--callback {
+    display: none;
+  }
+}
+
+.modal__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 30px 15px;
+}
+
+.modal__title {
+  margin-bottom: 19px;
+  color: #ffffff;
+}
+
+.modal__desc {
+  margin-bottom: 50px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.modal__form {
+  .form__text {
+    text-align: center;
+  }
+}
+
+.modal__close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  appearance: none;
+
+  svg {
+    width: 19px;
+    height: 19px;
+    fill: #ffffff;
+    stroke: #ffffff;
+  }
+}
+
+@media (min-width: 1200px) {
+  .modal {
+    top: 50%;
+    left: 50%;
+    width: 1170px;
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+
+    &--order {
+      top: 10%;
+      width: 1050px;
+      transform: translate(-50%, 0);
+
+      .modal__inner {
+        padding: 70px 80px;
+        background-image: url("../../img/order-bg.png");
+        background-size: cover;
+        border-radius: 10px;
+      }
+
+      .modal__title {
+        margin-bottom: 10px;
+        font-size: 30px;
+      }
+
+      .modal__desc {
+        margin-bottom: 70px;
+      }
+    }
+  }
+
+  .modal__inner {
+    min-height: unset;
+    padding: 90px 80px 40px 80px;
+  }
+
+  .modal__form {
+    display: flex;
+    justify-content: space-between;
+
+    .form__row {
+      width: 300px;
+    }
+  }
+
+  .modal__desc {
+    margin-bottom: 60px;
+    text-align: left;
+  }
+
+  .modal__title {
+    text-align: left;
+  }
+
+  .modal__close {
+    top: 30px;
+    right: 30px;
+  }
+}
