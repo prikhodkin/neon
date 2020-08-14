@@ -12,7 +12,7 @@ requireDir("./gulp/tasks/");
 // Режим разработки
 gulp.task('dev',
   gulp.series('clean',
-    gulp.parallel('sprite','sass','html','scripts:lib','scripts','images','favicons','fonts', 'webp'),
+    gulp.parallel('sprite','sass','html','scripts:lib','scripts','images','favicons','fonts'),
     gulp.parallel('watch','serve')
 ));
 
@@ -20,7 +20,7 @@ gulp.task('dev',
 // Режим продакшн
 gulp.task('build',
   gulp.series('clean',
-    gulp.parallel('sprite','sass:min','html:min','scripts:min','scripts-lib:min','images:min','favicons','fonts', 'webp'),
+    gulp.parallel('sprite','sass:min','html:min','scripts:min','scripts-lib:min','images','favicons','fonts'),
     'hash'
 ));
 
