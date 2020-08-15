@@ -57,6 +57,10 @@ const paths = {
   deploy: {
     dest: "../www/",
     src: "./dist/**"
+  },
+  vendor: {
+    src: "./src/vendor/**",
+    dest: "dist/vendor/"
   }
 };
 
