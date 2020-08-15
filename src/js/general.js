@@ -1,6 +1,7 @@
 // eslint-disable-next-line spaced-comment
 //= "../blocks/tab/tab.js"
 //= "../blocks/modal/modal.js"
+//= "../blocks/form/form.js"
 
 $(`.reviews__ins .reviews__list`).slick({
   dots: false,
