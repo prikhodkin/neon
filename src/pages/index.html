@@ -28,6 +28,7 @@
 </header>
   <main>
     <section class="promo">
+      <div class="promo__wrapper">
       <h1 class="promo__title">ГОЛОГРАФИЧЕСКИЕ РЮКЗАКИ И СУМКИ - <span>ХАМЕЛЕОНЫ</span></h1>
       <p class="promo__desc">Неоновый рюкзак-хамелон - это вместительный и ультрамодный тренд 2020 года. Благодаря светоотражающим пластинам рюкзак будет ярко выделяться и станет незаменимым предметом гардероба.</p>
       <div class="promo__bg"></div>
@@ -62,9 +63,10 @@
           </a>
         </li>
       </ul>
+      </div>
     </section>
     <section class="advantages">
-      <h2 class="advantages__title title">НЕОНОВЫЙ РЮКЗАК, КОТОРЫЙ ВЫДЕЛИТ ТЕБЯ СРЕДИ ВСЕХ</h2>
+      <h2 class="advantages__title title">НЕОНОВЫЙ РЮКЗАК,<br> КОТОРЫЙ ВЫДЕЛИТ ТЕБЯ СРЕДИ ВСЕХ</h2>
       <ul class="advantages__list">
         <li class="advantages__item advantages__item--first">
           <span class="advantages__number">01</span>
@@ -505,7 +507,7 @@
           <span class="scheme__number scheme__number--first">01</span>
           <div class="scheme__body">
             <p class="scheme__name">выбираете товар</p>
-            <p class="scheme__text">Добавьте необходимые товары нажав на кнопку “Оформить”</p>
+            <p class="scheme__text">Добавьте необходимые товары, нажав на кнопку “Оформить”</p>
           </div>
         </li>
         <li class="scheme__item">
@@ -519,14 +521,14 @@
           <span class="scheme__number scheme__number--thrid">03</span>
           <div class="scheme__body">
             <p class="scheme__name">доставляем</p>
-            <p class="scheme__text">Мы отправляем ваш заказ в течение 24 часов в любую точку России. (Вы получите трек-номер для отслеживания)</p>
+            <p class="scheme__text">Мы отправляем ваш заказ в течение 24 часов в любую точку России. Вы получите трек-номер для отслеживания</p>
           </div>
         </li>
         <li class="scheme__item">
           <span class="scheme__number scheme__number--fourth">04</span>
           <div class="scheme__body">
             <p class="scheme__name">вы получаете</p>
-            <p class="scheme__text">Вы получаете и осматриваете заказ, только после этого вы оплачиваете его</p>
+            <p class="scheme__text">Вы получаете заказ и наслаждаетесь покупкой!</p>
           </div>
         </li>
       </ul>
@@ -570,7 +572,7 @@
     </section>
     <section class="features" id="features">
       <h2 class="features__title title">В чем <span>особенность</span> нашей продукции?</h2>
-      <p class="features__desc text">Благодаря светоотражающим пластинам рюкзак будет ярко выделяться и станет незаменимым предметом гардероба.</p>
+      <p class="features__desc text">Благодаря светоотражающим пластинам рюкзак будет ярко выделяться и станет незаменимым предметом гардероба</p>
       <ul class="features__list">
         <li class="features__item">
           <img src="../img/features__01.jpg" class="features__img">
@@ -712,7 +714,7 @@
       </div>
     </section>
     <section class="faq" id="faq">
-      <h2 class="faq__title title">ответы на популярные вопросы</h2>
+      <h2 class="faq__title title">ответы <br>на популярные вопросы</h2>
       <ul class="faq__list">
         <li class="faq__item faq__item--active">
           <div class="faq__control">
@@ -724,7 +726,8 @@
             </div>
           </div>
           <div class="faq__content">
-            <p>При заказе товара у нас вы можете оплатить товар тремя способами: наличными при получении товара курьером, оплата банковской картой, наложенным платежом.</p>
+            <p>Добавьте в Корзину понравившиеся позиции из каталога. Затем перейдите в оформление заказа,
+              заполните пустые поля и нажмите “Заказать”. После этого наш менеджер позвонит вам, чтобы подтвердить заказ и учтонить адрес и время доставки.</p>
           </div>
         </li>
         <li class="faq__item">
@@ -758,7 +761,7 @@
     <section class="question">
       <div class="question__content">
         <h2 class="question__title">Остались вопросы?</h2>
-        <p class="question__desc">Наш менеджер свяжется с вами в течение 15 минут и ответит на все интересующиеся оопросы</p>
+        <p class="question__desc">Наш менеджер свяжется с вами в течение 15 минут и ответит на все интересующиеся вопросы</p>
       </div>
       <form action="#" class="question__form form">
         <div class="form__row">
@@ -929,7 +932,7 @@
           </div>
           <div class="form__row">
             <label for="textarea" class="form__label">Адрес ( не заполняйте в случае самовывоза)</label>
-            <textarea onkeyup="textAreaAdjust(this)" name="textarea" id="textarea" cols="30" rows="10" class="form__textarea" placeholder="г. Екатеринбург, ул. Ленина 73, кв. 34"></textarea>
+            <textarea onkeyup="textAreaAdjust(this)" name="textarea" id="textarea" cols="30" rows="10" class="form__textarea" placeholder="г. Москва, ул. Мира 73, кв. 34"></textarea>
           </div>
           <div class="form__control">
             <button type="submit" class="form__button button">

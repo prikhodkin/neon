@@ -17,8 +17,12 @@
   letter-spacing: 0.03em;
   background: transparent;
   border: none;
-  border-bottom: 2px solid #6453cd;
+  border-bottom: 2px solid rgba(201, 200, 207, 0.53);
   border-radius: 0;
+
+  &:focus {
+    border-color: #6453cd;
+  }
 }
 
 .form__textarea {

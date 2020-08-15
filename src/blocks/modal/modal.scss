@@ -4,12 +4,15 @@
   left: 0;
   z-index: 110;
   width: 100%;
+  height: 100vh;
+  overflow: scroll;
   background-image: url("../../img/modal__bg.png");
+  background-position: top;
   background-size: cover;
 
   &--order {
     display: none;
-    border-radius: 10px;
+
 
     .modal__inner {
       padding-top: 50px;
@@ -77,12 +80,19 @@
     top: 50%;
     left: 50%;
     width: 1170px;
+    height: unset;
+    overflow: unset;
     border-radius: 10px;
     transform: translate(-50%, -50%);
+
+    &--callback {
+      position: fixed;
+    }
 
     &--order {
       top: 10%;
       width: 1050px;
+      border-radius: 10px;
       transform: translate(-50%, 0);
 
       .modal__inner {

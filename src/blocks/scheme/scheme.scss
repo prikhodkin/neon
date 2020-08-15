@@ -1,6 +1,6 @@
 .scheme {
   position: relative;
-  padding: 120px 15px 65px 15px;
+  padding: 70px 15px 65px 15px;
   background: #070a17;
 
   &::before {
@@ -113,7 +113,17 @@
     &::before {
       height: 120px;
       background-image: url("../../img/scheme__before--desk.png");
-      background-position: top;
+      background-position: right;
+    }
+
+    &::after {
+      @include pseudo;
+      position: absolute;
+      top: 75px;
+      right: 225px;
+      width: 54px;
+      height: 54px;
+      background-image: url("../../img/scheme__circle.png");
     }
   }
 

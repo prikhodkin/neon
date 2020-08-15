@@ -1,5 +1,6 @@
 // eslint-disable-next-line spaced-comment
 //= "../blocks/tab/tab.js"
+//= "../blocks/modal/modal.js"
 
 $(`.reviews__ins .reviews__list`).slick({
   dots: false,
@@ -33,6 +34,7 @@ $(`.slider__list`).slick({
   slidesToShow: 1,
   slidesToScroll: 1,
   arrows: false,
+  infinite: true,
   fade: true,
   asNavFor: `.slider__sub-list`
 });
@@ -49,31 +51,3 @@ $(`.slider__sub-list`).slick({
   nextArrow: `.slider__button--next`
 });
 
-$(`.products__button`).on(`click`, function (evt) {
-  evt.preventDefault();
-  $(`.overlay`).fadeIn();
-  $(`.modal--order`).fadeIn();
-  $(`.modal--order`).css(`top`, pageYOffset + 50 + `px`);
-  $(`.slider__list`).slick(`reinit`);
-  $(`.slider__sub-list`).slick(`reinit`);
-
-});
-
-$(`.modal__close`).on(`click`, function () {
-  $(`.overlay`).fadeOut();
-  $(`.modal`).fadeOut();
-});
-
-$(`.delivery__button`).on(`click`, function (evt) {
-  evt.preventDefault();
-  $(`.overlay`).fadeIn();
-  $(`.modal--callback`).fadeIn();
-  $(`.modal--callback`).css(`top`, pageYOffset + 300 + `px`);
-});
-
-$(`.features__link`).on(`click`, function (evt) {
-  evt.preventDefault();
-  $(`.overlay`).fadeIn();
-  $(`.modal--callback`).fadeIn();
-  $(`.modal--callback`).css(`top`, pageYOffset + 300 + `px`);
-});

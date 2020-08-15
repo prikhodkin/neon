@@ -1,5 +1,5 @@
 .delivery {
-  padding: 90px 15px 65px 15px;
+  padding: 65px 15px 65px 15px;
 }
 
 .delivery__title {
@@ -7,7 +7,7 @@
 }
 
 .delivery__desc {
-  margin-bottom: 57px;
+  margin-bottom: 30px;
 }
 
 .delivery__list {
@@ -17,13 +17,12 @@
 
 .delivery__item {
   &:not(:last-child) {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
 }
 
 .delivery__number {
   display: inline-block;
-  margin-bottom: 26px;
   font-weight: 200;
   font-size: 50px;
   line-height: 61px;
@@ -118,5 +117,17 @@
     &:not(:last-child) {
       margin-bottom: 0;
     }
+  }
+
+  .delivery__title {
+    max-width: 775px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .delivery__desc {
+    max-width: 530px;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
