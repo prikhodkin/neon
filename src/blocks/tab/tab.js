@@ -1,29 +1,34 @@
 /* eslint-disable no-undef */
-const tabs = document.querySelectorAll(`[data-tab]`);
-const tabsContent = document.querySelectorAll(`[data-content]`);
-const tabsReviews = document.querySelectorAll(`[data-tab-reviews]`);
-const tabsContentReviews = document.querySelectorAll(`[data-content-reviews]`);
+const DATA_TAB = `data-tab`;
+const DATA_CONTENT = `data-content`;
+const DATA_TAB_REVIEWS = `data-tab-reviews`;
+const DATA_CONTENT_REVIEWS = `data-content-reviews`;
+const TAB_ACTIVE_CLASS = `tab__item--active`;
+const CONTENT_ACTIVE_CLASS = `catalog__content--show`;
 
-const showTab = function (arrTab, arrContent, dataTab, dataContent) {
-  arrTab.forEach(function (item) {
-    item.addEventListener(`click`, function () {
-      for (let index = 0; index < arrTab.length; index++) {
-        arrTab[index].classList.remove(`tab__item--active`);
-      }
-      item.classList.add(`tab__item--active`);
-      const tabID = item.getAttribute(dataTab);
-      for (let o = 0; o < arrContent.length; o++) {
-        arrContent[o].classList.remove(`catalog__content--show`);
-        const contentID = arrContent[o].getAttribute(dataContent);
-        if (tabID === contentID) {
-          arrContent[o].classList.add(`catalog__content--show`);
-          $(`.reviews__list`).slick(`reinit`);
-        }
-      }
+const tabs = document.querySelectorAll(`[${DATA_TAB}]`);
+const tabsContent = document.querySelectorAll(`[${DATA_CONTENT}]`);
+
+const tabsReviews = document.querySelectorAll(`[${DATA_TAB_REVIEWS}]`);
+const tabsContentReviews = document.querySelectorAll(`[${DATA_CONTENT_REVIEWS}]`);
+
+const showTab = (arrTabs, arrContents, dataTab, dataContent, callback = () => {}) => {
+  arrTabs.forEach((item) => {
+    item.addEventListener(`click`, () => {
+      const id = item.getAttribute(dataTab);
+      const content = document.querySelector(`[${dataContent}="${id}"]`);
+      const activeTab = document.querySelector(`.${TAB_ACTIVE_CLASS}[${dataTab}]`);
+      const activeContent = document.querySelector(`.${CONTENT_ACTIVE_CLASS}[${dataContent}]`);
+
+      activeTab.classList.remove(TAB_ACTIVE_CLASS);
+      item.classList.add(TAB_ACTIVE_CLASS);
+
+      activeContent.classList.remove(CONTENT_ACTIVE_CLASS);
+      content.classList.add(CONTENT_ACTIVE_CLASS);
+      callback();
     });
   });
 };
-
 const showCard = function () {
   tabsContent.forEach(function (item) {
     const list = item.querySelector(`.catalog__list`);
@@ -37,5 +42,7 @@ const showCard = function () {
 };
 
 showCard();
-showTab(tabs, tabsContent, `data-tab`, `data-content`);
-showTab(tabsReviews, tabsContentReviews, `data-tab-reviews`, `data-content-reviews`);
+showTab(tabs, tabsContent, DATA_TAB, DATA_CONTENT);
+showTab(tabsReviews, tabsContentReviews, DATA_TAB_REVIEWS, DATA_CONTENT_REVIEWS, () => $(`.reviews__list`).slick(`reinit`));
+
+
