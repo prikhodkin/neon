@@ -1,4 +1,5 @@
 // eslint-disable-next-line spaced-comment
+//= "../blocks/catalog/catalog.js"
 //= "../blocks/tab/tab.js"
 //= "../blocks/modal/modal.js"
 //= "../blocks/form/form.js"
@@ -31,24 +32,23 @@ $(`a[href^='#']`).click(function () {
   $(`html, body`).animate({scrollTop: $(_href).offset().top + `px`});
   return false;
 });
-$(`.slider__list`).slick({
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  arrows: false,
-  infinite: true,
-  fade: true,
-  asNavFor: `.slider__sub-list`
-});
+// $(`.slider__list`).slick({
+//   slidesToShow: 1,
+//   slidesToScroll: 1,
+//   arrows: false,
+//   infinite: true,
+//   fade: true,
+//   asNavFor: `.slider__sub-list`
+// });
 
-$(`.slider__sub-list`).slick({
-  slidesToShow: 4,
-  slidesToScroll: 1,
-  asNavFor: `.slider__list`,
-  dots: false,
-  centerMode: false,
-  focusOnSelect: true,
-  infinite: true,
-  prevArrow: `.slider__button--prev`,
-  nextArrow: `.slider__button--next`
-});
-
+// $(`.slider__sub-list`).slick({
+//   slidesToShow: 4,
+//   slidesToScroll: 1,
+//   asNavFor: `.slider__list`,
+//   dots: false,
+//   centerMode: false,
+//   focusOnSelect: true,
+//   infinite: true,
+//   prevArrow: `.slider__button--prev`,
+//   nextArrow: `.slider__button--next`
+// });

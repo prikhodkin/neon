@@ -1,6 +1,34 @@
+//= "./fillModal.js"
+
+
 const openModal = function (target, modal, callback = () => {}) {
   $(target).on(`click`, function (evt) {
     evt.preventDefault();
+
+    const modalI = evt.target.closest("a").dataset.id;
+    document.querySelector(".order").insertAdjacentHTML('afterbegin', fillModal(modalI));
+
+    $(`.slider__list`).slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      infinite: true,
+      fade: true,
+      asNavFor: `.slider__sub-list`
+    });
+    
+    $(`.slider__sub-list`).slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      asNavFor: `.slider__list`,
+      dots: false,
+      centerMode: false,
+      focusOnSelect: true,
+      infinite: true,
+      prevArrow: `.slider__button--prev`,
+      nextArrow: `.slider__button--next`
+    });
+    
     $(`.overlay`).fadeIn();
     $(modal).fadeIn();
     callback();
@@ -28,5 +56,6 @@ $(`.modal__close`).on(`click`, function () {
   $(`.overlay`).fadeOut();
   $(`.modal`).fadeOut();
   $(`.page`).removeClass(`page--lock`);
+  deleteModalInfo();
 
 });
