@@ -1,6 +1,6 @@
 
 const fillModal = (ii) => {
-    const pursesArray = products.filter(it => it.category === "purse");
+    const pursesArray = products.filter(it => it.category === "purse" && it.id != ii);
     const randomPurse = pursesArray[Math.floor(Math.random()*pursesArray.length)];
     
     for (let item of products) {
