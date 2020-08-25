@@ -5,6 +5,7 @@ const fillModal = (ii) => {
     
     for (let item of products) {
         if (item.id == ii) {
+          const descriptionsArray = item.description.split(`.`);
             return `
             <div class="order__top">
           <div class="order__preview">
@@ -47,8 +48,7 @@ const fillModal = (ii) => {
             </div>
             <div class="order__info">
               <p class="order__text"><span>Размер:</span> ${item.size}</p>
-              <p class="order__text">Внутренний карман на молнии</p>
-              <p class="order__text">Отделение на ремешках-стяжках</p>
+                  <p class="order__text">${item.description}</p>
               <p class="order__text">Материал: ${item.material}</p>
             </div>
             <div class="order__sub-title">дополни свой заказ:</div>
