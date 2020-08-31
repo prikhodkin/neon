@@ -5,7 +5,7 @@ const openModal = function (target, modal, callback = () => {}) {
   $(target).on(`click`, function (evt) {
     evt.preventDefault();
 
-    const modalI = evt.target.closest("a").dataset.id;
+    const modalI = evt.target.closest("li").dataset.id;
     document.querySelector(".order").insertAdjacentHTML('afterbegin', fillModal(modalI));
 
     $(`.slider__list`).slick({
@@ -35,7 +35,7 @@ const openModal = function (target, modal, callback = () => {}) {
   });
 };
 
-openModal(`.products__button`, `.modal--order`, function () {
+openModal(`.catalog__item`, `.modal--order`, function () {
   if ($(window).width() < 767) {
     $(`.page`).addClass(`page--lock`);
   } else {
