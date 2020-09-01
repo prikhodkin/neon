@@ -6,7 +6,7 @@ const openModal = function (target, modal, callback = () => {}) {
     evt.preventDefault();
 
     const modalI = evt.target.closest("li").dataset.id;
-    document.querySelector(".order").insertAdjacentHTML('afterbegin', fillModal(modalI));
+    fillModal(modalI);
 
     $(`.slider__list`).slick({
       slidesToShow: 1,
