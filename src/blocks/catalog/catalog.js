@@ -16,7 +16,7 @@ const dataCard = (prod) => {
     return `<ul class="catalog__list catalog__list--hide">
         ${prod.map((it) => {
             return `
-                <li class="catalog__item products">
+                <li class="catalog__item products" data-id=${it.id}>
                     <span class="products__flag ${it.sale ? `products__flag--sale` : ``}">${it.flag}</span>
                     <a href="" class="products__img">
                         <img src="${it.img}">
@@ -28,7 +28,7 @@ const dataCard = (prod) => {
                         <span class="products__old-price">${it.oldprice} ₽ </span>
                         <span class="products__price">${it.newprice} ₽ </span>
                     </div>
-                    <a href="" class="products__button button" data-id=${it.id}>
+                    <a href="" class="products__button button">
                         <div class="button__bg">Оформить заказ<br> со скидкой</div>
                     </a>
                 </li>`
