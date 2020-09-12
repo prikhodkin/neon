@@ -2,7 +2,7 @@
 const fillModal = (ii) => {
     const pursesArray = products.filter(it => it.category === "purse" && it.id != ii);
     const randomPurse = pursesArray[Math.floor(Math.random()*pursesArray.length)];
-    
+
     for (let item of products) {
         if (item.id == ii) {
           document.querySelector(".order").insertAdjacentHTML('afterbegin', fillModalTop(item, randomPurse));
@@ -72,17 +72,17 @@ const fillModalTop = (item, randomPurse) => {
                 <label for="check" class="order__label">Добавить аксессуар к заказу</label>
               </div>
           </div>
-          
+
           `
 }
 
 const fillHiddenInputs = (item, randomPurse) => {
       return `
         <div id="hidden-inputs">
-          <input type="hidden" name="product-name" value="${item.name}">
-          <input type="hidden" name="product-price" value="${item.newprice}">
-          <input type="hidden" name="purse-name" value="${randomPurse.name}">
-          <input type="hidden" name="purse-price" value="${randomPurse.newprice}">
+          <input type="hidden" name="Название товара" value="${item.name}">
+          <input type="hidden" name="Цена продукта" value="${item.newprice}">
+          <input type="hidden" name="Название кошелька(доп. товар)" value="${randomPurse.name}">
+          <input type="hidden" name="Цена кошелька(доп. товар)" value="${randomPurse.newprice}">
         </div>
       `
 }
