@@ -9,6 +9,29 @@ const fillModal = (ii) => {
           document.querySelector(".order__form").insertAdjacentHTML('afterbegin', fillHiddenInputs(item, randomPurse));
         }
     }
+
+    $(`.slider__list`).slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      infinite: true,
+      fade: true,
+      asNavFor: `.slider__sub-list`
+    });
+
+    $(`.slider__sub-list`).slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      asNavFor: `.slider__list`,
+      dots: false,
+      arrows: true,
+      centerMode: false,
+      focusOnSelect: true,
+      infinite: true,
+      prevArrow: `.slider__button--prev`,
+      nextArrow: `.slider__button--next`
+    });
+
 }
 
 const fillModalTop = (item, randomPurse) => {
@@ -88,6 +111,13 @@ const fillHiddenInputs = (item, randomPurse) => {
 }
 
 const deleteModalInfo = () => {
-    document.querySelector(".order__top").remove();
-    document.querySelector("#hidden-inputs").remove();
+    const orderTop = document.querySelector(".order__top");
+    const hidden = document.querySelector("#hidden-inputs");
+
+    if (!orderTop) {
+      return;
+    }
+
+    orderTop.remove();
+    hidden.remove();
 }

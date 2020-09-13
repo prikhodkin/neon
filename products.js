@@ -7,7 +7,7 @@ const products = [
         "name": "Городской рюкзак №1",
         "oldprice": 2100,
         "newprice": 1690,
-        "img": "../img/products/cityBP1/productCard.png",
+        "img": "../img/products/cityBP1/productCard.jpg",
         "size": "34x25x13.5",
         "description": "Три вместительных кармана один из них на молнии. Регулируемые стяжки. Три вида рисунка.",
         "pictures": ["../img/products/cityBP1/Group 320.png","../img/products/cityBP1/Group 319.png","../img/products/cityBP1/Group 321.png","../img/products/cityBP1/Group 322.png","../img/products/cityBP1/Group 323.png","../img/products/cityBP1/Group 324.png", "../img/products/cityBP1/Group 325.png", "../img/products/cityBP1/Group 327.png" ],
@@ -21,7 +21,7 @@ const products = [
         "name": "Городской рюкзак №2",
         "oldprice": 2100,
         "newprice": 1690,
-        "img": "../img/products/cityBP2/productCard.png",
+        "img": "../img/products/cityBP2/productCard.jpg",
         "size": "34x25x13.5",
         "description": "Три вместительных кармана один из них на молнии. Регулируемые стяжки. Три вида рисунка.",
         "pictures": ["../img/products/cityBP2/Group 319.png","../img/products/cityBP2/Group 320.png","../img/products/cityBP2/Group 323.png","../img/products/cityBP2/Group 324.png","../img/products/cityBP2/Group 325.png" ],
@@ -80,7 +80,7 @@ const products = [
         "img": "../img/products/BPmini3/productCard.png",
         "size": "24*12*29",
         "description": "Три наружных кармана один из них на молнии. Одно основное большое отделение, три внутренних кармана, одно из них на молнии. Регулируемые лямки. Три вида рисунка.",
-        "pictures": ["../img/products/BPmini3/Group 320.png","../img/products/BPmini3/Group 327.png","../img/products/BPmini3/Group 328.png","../img/products/BPmini3/Rectangle 169.png","../img/products/BPmini3/Reactangle 170.png"],
+        "pictures": ["../img/products/BPmini3/Group 320.png","../img/products/BPmini3/Group 327.png","../img/products/BPmini3/Group 328.png","../img/products/BPmini3/Rectangle 169.png","../img/products/BPmini3/Rectangle 170.png"],
         "material": "Полиуретан/Нейлон"
     },
     {

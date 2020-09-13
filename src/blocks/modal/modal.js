@@ -5,29 +5,15 @@ const openModal = function (target, modal, callback = () => {}) {
   $(target).on(`click`, function (evt) {
     evt.preventDefault();
 
-    const modalI = evt.target.closest("li").dataset.id;
-    fillModal(modalI);
+    const catalogItem = evt.target.closest(".catalog__item");
 
-    $(`.slider__list`).slick({
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      arrows: false,
-      infinite: true,
-      fade: true,
-      asNavFor: `.slider__sub-list`
-    });
+    if (catalogItem) {
+      const modalI = evt.target.closest(".catalog__item").dataset.id;
+      fillModal(modalI);
+    }
 
-    $(`.slider__sub-list`).slick({
-      slidesToShow: 4,
-      slidesToScroll: 1,
-      asNavFor: `.slider__list`,
-      dots: false,
-      centerMode: false,
-      focusOnSelect: true,
-      infinite: true,
-      prevArrow: `.slider__button--prev`,
-      nextArrow: `.slider__button--next`
-    });
+
+
 
     $(`.overlay`).fadeIn();
     $(modal).fadeIn();
