@@ -7,7 +7,8 @@ $(`form`).submit(function () { // Change
   }).done(function () {
     console.log(`yes`);
     $(`.modal`).fadeOut();
-    alert(`Успешно`);
+    // alert(`Успешно`);
+    window.location.href = "./thanks.html";
     setTimeout(function () {
       // Done Functions
       th.trigger(`reset`);
