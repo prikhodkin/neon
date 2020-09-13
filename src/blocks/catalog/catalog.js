@@ -19,7 +19,7 @@ const dataCard = (prod) => {
                 <li class="catalog__item products" data-id=${it.id}>
                     <span class="products__flag ${it.sale ? `products__flag--sale` : ``}">${it.flag}</span>
                     <a href="" class="products__img">
-                        <img src="${it.img}" alt="${it.name}" style="height: 169px;">
+                        <img src="${it.img}" alt="${it.name}">
                     </a>
                     <a href="" class="products__name">${it.name}</a>
                     <p class="products__info"><span>Размер кондиционеров:</span> ${it.size}</p>
