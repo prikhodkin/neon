@@ -16,7 +16,7 @@ const openModal = function (target, modal, callback = () => {}) {
       fade: true,
       asNavFor: `.slider__sub-list`
     });
-    
+
     $(`.slider__sub-list`).slick({
       slidesToShow: 4,
       slidesToScroll: 1,
@@ -28,7 +28,7 @@ const openModal = function (target, modal, callback = () => {}) {
       prevArrow: `.slider__button--prev`,
       nextArrow: `.slider__button--next`
     });
-    
+
     $(`.overlay`).fadeIn();
     $(modal).fadeIn();
     callback();

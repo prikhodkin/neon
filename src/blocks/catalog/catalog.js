@@ -41,4 +41,4 @@ const dataCard = (prod) => {
 document.querySelector(`[data-content="1"]`).insertAdjacentHTML('afterbegin', dataCard(dataBackPack));
 document.querySelector(`[data-content="2"]`).insertAdjacentHTML('afterbegin', dataCard(dataBags));
 document.querySelector(`[data-content="3"]`).insertAdjacentHTML('afterbegin', dataCard(dataPurse));
-document.querySelector(`[data-content="4"]`).insertAdjacentHTML('afterbegin', dataCard(products));
+// document.querySelector(`[data-content="4"]`).insertAdjacentHTML('afterbegin', dataCard(products));
