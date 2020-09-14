@@ -195,12 +195,13 @@
     &::before {
       content: "";
       position: absolute;
-      top: -200px;
-      right: -900px;
+      top: -70px;
+      right: -880px;
       display: block;
       width: 1170px;
-      height: 973px;
-      background-image: url("../../img/bags.png");
+      height: 670px;
+      background: no-repeat center url("../../img/promo__girls.png");
+      background-size: contain;
     }
   }
 
@@ -227,6 +228,20 @@
     margin: 12.5px;
     border-radius: 10px;
     transition: all 0.3s;
+    justify-content: center;
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      img {
+        margin-top: 30px;
+      }
+    }
+
+    &:nth-child(3) {
+      img {
+        margin-top: 15px;
+      };
+    }
 
     &:hover {
       transform: scale(1.06);
