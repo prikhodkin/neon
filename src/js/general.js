@@ -5,9 +5,19 @@
 //= "../blocks/form/form.js"
 
 $(`.reviews__ins .reviews__list`).slick({
+  slidesToShow: 3,
+  infinite: true,
   dots: false,
   nextArrow: `.reviews__ins .reviews__button--next`,
-  prevArrow: `.reviews__ins .reviews__button--prev`
+  prevArrow: `.reviews__ins .reviews__button--prev`,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1
+      }
+    }
+  ]
 });
 
 $(`.reviews__vk .reviews__list`).slick({
