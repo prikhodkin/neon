@@ -236,4 +236,17 @@
     font-size: 35px;
     line-height: 60px;
   }
+
+  .reviews__button {
+    background: linear-gradient(180deg, #b487ec 0%, #6c19aa 100%);
+
+    svg {
+      stroke: #ffffff;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+      transition: all 0.3s;
+    }
+  }
 }
