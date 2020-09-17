@@ -192,7 +192,7 @@ const products = [
         "img": "../img/products/bag-banana2/productCard.png",
         "size": "39*11*15",
         "description": "Одно основное большое отделение, один внутренний карман на молнии. Регулируемый ремень 80-110см (рисунок - ромб). Регулируемый ремень 86-113см (рисунок - цветок). Два вида рисунка.",
-        "pictures": ["../img/products/bag-banana2/Group 330.png", "../img/products/bag-banana2/Group 331.png", "../img/products/bag-banana2/Rectangle 169.png"],
+        "pictures": ["../img/products/bag-banana2/bag-banana2-1.jpg", "../img/products/bag-banana2/bag-banana2.jpg", "../img/products/bag-banana2/Group 331.png", "../img/products/bag-banana2/Rectangle 169.png"],
         "material": "Полиуретан/Нейлон",
     },
     {
