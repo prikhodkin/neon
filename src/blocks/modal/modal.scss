@@ -139,5 +139,12 @@
   .modal__close {
     top: 30px;
     right: 30px;
+
+    &:hover {
+      svg {
+        transform: scale(1.2);
+        transition: all 0.3s;
+      }
+    }
   }
 }
