@@ -143,6 +143,16 @@
   margin-top: 25px;
 }
 
+@media (min-width: 768px) {
+  .reviews__img {
+    width: 90%;
+  }
+
+  .reviews__wrapper {
+    margin-bottom: 80px;
+  }
+}
+
 @media (min-width: 1200px) {
   .reviews {
     @include page-wrapper;
@@ -169,7 +179,6 @@
   .reviews__wrapper {
     display: flex;
     justify-content: center;
-    margin-bottom: 80px;
   }
 
   .reviews__desc {
