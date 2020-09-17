@@ -70,6 +70,8 @@
 .reviews__img {
   display: block;
   width: 70%;
+  object-fit: contain;
+  height: auto;
   // margin: 60px auto 30px auto;
   padding-left: 20px;
 }
@@ -121,20 +123,22 @@
   border-radius: 50%;
   cursor: pointer;
   appearance: none;
+  background: linear-gradient(180deg, #b487ec 0%, #6c19aa 100%);
+
 
   svg {
     width: 8px;
     height: 14px;
-    stroke: #9060dd;
+    stroke: #ffffff;
   }
 
-  &--active {
-    background: linear-gradient(180deg, #b487ec 0%, #6c19aa 100%);
+  // &--active {
+  //   background: linear-gradient(180deg, #b487ec 0%, #6c19aa 100%);
 
-    svg {
-      stroke: #ffffff;
-    }
-  }
+  //   svg {
+  //     stroke: #ffffff;
+  //   }
+  // }
 }
 
 .reviews__control {
