@@ -50,6 +50,7 @@
 
 .reviews__list {
   @include list-reset;
+  max-height: 350px;
 }
 
 .reviews__content {
@@ -73,7 +74,7 @@
   display: block;
 
   object-fit: contain;
-  height: auto;
+  height: 350px;
   // margin: 60px auto 30px auto;
   padding-left: 20px;
 }
@@ -152,10 +153,15 @@
 @media (min-width: 768px) {
   .reviews__img {
     width: 90%;
+    height: auto;
   }
 
   .reviews__wrapper {
     margin-bottom: 80px;
+  }
+
+  .reviews__list {
+    max-height: none;
   }
 }
 
