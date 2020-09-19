@@ -17,7 +17,9 @@ const dataCard = (prod) => {
         ${prod.map((it) => {
             return `
                 <li class="catalog__item products" data-id=${it.id}>
-                    <span class="products__flag ${it.sale ? `products__flag--sale` : ``}">${it.flag}</span>
+                    ${it.flag ?
+                      `<span class='products__flag ${it.sale ? `products__flag--sale` : ``}'>${it.flag}</span>`
+                      : ""}
                     <a href="" class="products__img">
                         <img src="${it.img}" alt="${it.name}">
                     </a>
