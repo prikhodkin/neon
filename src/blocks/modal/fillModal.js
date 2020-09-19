@@ -8,30 +8,7 @@ const fillModal = (ii) => {
           document.querySelector(".order").insertAdjacentHTML('afterbegin', fillModalTop(item, randomPurse));
           document.querySelector(".order__form").insertAdjacentHTML('afterbegin', fillHiddenInputs(item, randomPurse));
         }
-    }
-
-    $(`.slider__list`).slick({
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      arrows: false,
-      infinite: true,
-      fade: true,
-      asNavFor: `.slider__sub-list`
-    });
-
-    $(`.slider__sub-list`).slick({
-      slidesToShow: 4,
-      slidesToScroll: 1,
-      asNavFor: `.slider__list`,
-      dots: false,
-      arrows: true,
-      centerMode: false,
-      focusOnSelect: true,
-      infinite: true,
-      prevArrow: `.slider__button--prev`,
-      nextArrow: `.slider__button--next`
-    });
-
+      }
 }
 
 const fillModalTop = (item, randomPurse) => {
@@ -90,9 +67,11 @@ const fillModalTop = (item, randomPurse) => {
                 </div>
               </div>
               <div class="order__check">
-                <input type="checkbox" class="order__input" name="check" id="check" checked>
-                <span class="order__mark"></span>
-                <label for="check" class="order__label">Добавить аксессуар к заказу</label>
+                <label for="check" class="order__label">
+                  <input type="checkbox" class="order__input" name="check" id="check">
+                  <span class="order__mark"></span>
+                  <p>Добавить аксессуар к заказу</p>
+                </label>
               </div>
           </div>
 

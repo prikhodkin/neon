@@ -195,13 +195,14 @@
     &::before {
       content: "";
       position: absolute;
-      top: -70px;
+      top: -55px;
       right: -880px;
       display: block;
       width: 1170px;
       height: 670px;
       background: no-repeat center url("../../img/promo__girls.png");
       background-size: contain;
+      z-index: 1;
     }
   }
 

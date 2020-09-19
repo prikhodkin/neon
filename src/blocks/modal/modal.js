@@ -10,6 +10,37 @@ const openModal = function (target, modal, callback = () => {}) {
     if (catalogItem) {
       const modalI = evt.target.closest(".catalog__item").dataset.id;
       fillModal(modalI);
+
+      $(`.slider__list`).slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        draggable: false,
+        arrows: true,
+        infinite: true,
+        fade: true,
+        asNavFor: `.slider__sub-list`,
+        prevArrow: `.slider__button--prev`,
+        nextArrow: `.slider__button--next`
+      });
+
+      $(`.slider__sub-list`).slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        asNavFor: `.slider__list`,
+        dots: false,
+        arrows: false,
+        centerMode: false,
+        focusOnSelect: true,
+        infinite: true
+      });
+
+      var slides = $(".slider__list .slick-track > .slick-slide").length;
+
+      if (slides === 4) {
+        $('.slider__list').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+          $('.slider__sub-list .slick-list .slick-track').css({"transform" : "translate3d(0,0,0)"})
+        });
+      }
     }
 
 
