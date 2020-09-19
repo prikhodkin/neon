@@ -65,11 +65,13 @@
 .reviews__inner {
   display: flex;
   justify-content: center;
+  width: 70%;
+  margin: 0 auto;
 }
 
 .reviews__img {
   display: block;
-  width: 70%;
+
   object-fit: contain;
   height: auto;
   // margin: 60px auto 30px auto;
