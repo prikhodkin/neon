@@ -6,7 +6,9 @@
   width: 100%;
   height: 100%;
   overflow: scroll;
-  background-image: url("../../img/modal__bg.png");
+  //background-image: url("../../img/modal__bg.png");
+  background-color: #1F1C30;
+  background-image: linear-gradient(98.71deg, rgba(157, 96, 221, 0.342) -4.25%, rgba(73, 39, 164, 0.318) 105.51%);
   background-position: top;
   background-size: cover;
 
@@ -98,7 +100,8 @@
 
       .modal__inner {
         padding: 70px 80px;
-        background-image: url("../../img/order-bg.png");
+        background-color: #1F1C30;
+        background-image: linear-gradient(98.71deg, rgba(157, 96, 221, 0.342) -4.25%, rgba(73, 39, 164, 0.318) 105.51%);
         background-size: cover;
         border-radius: 10px;
       }
