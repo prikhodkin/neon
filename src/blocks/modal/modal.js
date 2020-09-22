@@ -10,7 +10,7 @@ const openModal = function (target, modal, callback = () => {}) {
     if (catalogItem) {
       const modalI = evt.target.closest(".catalog__item").dataset.id;
       fillModal(modalI);
-
+      $("img.lazy").Lazy();
       $(`.slider__list`).slick({
         slidesToShow: 1,
         slidesToScroll: 1,

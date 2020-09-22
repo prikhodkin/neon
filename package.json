@@ -3,11 +3,12 @@
   "dependencies": {
     "hc-sticky": "^2.2.3",
     "jquery": "^3.5.1",
+    "jquery-lazy": "^1.7.11",
     "node-normalize-scss": "^8.0.1",
     "slick-carousel": "^1.8.1",
+    "stimulus": "^1.1.1",
     "vh-check": "^2.0.5",
-    "wow.js": "^1.2.2",
-    "stimulus": "^1.1.1"
+    "wow.js": "^1.2.2"
   },
   "devDependencies": {
     "@babel/core": "^7.10.2",

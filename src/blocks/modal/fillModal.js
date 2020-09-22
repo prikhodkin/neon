@@ -23,13 +23,13 @@ const fillModalTop = (item, randomPurse) => {
               <div class="order__slider slider">
                 <ul class="slider__list">
                   ${item.pictures.map(it => {
-                      return `<li class="slider__item"><img src="${it}" alt=""></li>`
+                      return `<li class="slider__item"><img class="lazy" data-src="${it}" alt=""></li>`
                   }).join('')
                   }
                 </ul>
                 <ul class="slider__sub-list">
                   ${item.pictures.map(it => {
-                      return `<li class="slider__item"><img src="${it}" alt=""></li>`
+                      return `<li class="slider__item"><img class="" src="${it}" alt=""></li>`
                   }).join('')
                   }
                 </ul>
@@ -60,7 +60,7 @@ const fillModalTop = (item, randomPurse) => {
               <div class="order__sub-title">дополни свой заказ:</div>
               <p class="order__text">аксессуаром по супер цене</p>
               <div class="order__additional">
-                <img src="${randomPurse.img}" alt="" class="order__img">
+                <img data-src="${randomPurse.img}" alt="" class="order__img lazy">
                 <div class="order__right">
                   <p class="order__sub-name">${randomPurse.name}</p>
                   <p class="order__price">${randomPurse.newprice} ₽ </p>

@@ -62,3 +62,5 @@ $(`a[href^='#']`).click(function () {
 //   prevArrow: `.slider__button--prev`,
 //   nextArrow: `.slider__button--next`
 // });
+
+$("img.lazy").Lazy();
