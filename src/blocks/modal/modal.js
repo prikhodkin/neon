@@ -54,7 +54,7 @@ const openModal = function (target, modal, callback = () => {}) {
 
 openModal(`.catalog__item`, `.modal--order`, function () {
   if ($(window).width() < 767) {
-    $(`.page`).addClass(`page--lock`);
+    // $(`.page`).addClass(`page--lock`);
   } else {
     $(`.modal--order`).css(`top`, pageYOffset + 100 + `px`);
   }
@@ -63,10 +63,10 @@ openModal(`.catalog__item`, `.modal--order`, function () {
 });
 
 openModal(`.delivery__button, .features__link`, `.modal--callback`, function () {
-  if ($(window).width() < 767) {
-    $(`.page`).addClass(`page--lock`);
-    // $(`.modal--callback`).css(`top`, pageYOffset + 0 + `px`);
-  }
+  // if ($(window).width() < 767) {
+  //   $(`.page`).addClass(`page--lock`);
+  //   // $(`.modal--callback`).css(`top`, pageYOffset + 0 + `px`);
+  // }
 });
 
 $(`.modal__close`).on(`click`, function () {
