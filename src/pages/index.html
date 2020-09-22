@@ -7,6 +7,21 @@
   <title>Голографические рюкзаки и сумки - хамелеоны</title>
   @@include('../blocks/favicon/favicon.html')
   <link rel="stylesheet" href="css/main.css">
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+      m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(67531303, "init", {
+      clickmap:true,
+      trackLinks:true,
+      accurateTrackBounce:true,
+      webvisor:true
+    });
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/67531303" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
 </head>
 <body class="page">
 <header class="page__header header">
@@ -438,7 +453,7 @@
         <h2 class="question__title">Остались вопросы?</h2>
         <p class="question__desc">Наш менеджер свяжется с вами в ближайшее время и ответит на все интересующие вопросы</p>
       </div>
-      <form action="#" class="question__form form">
+      <form action="#" class="question__form form" onsubmit="ym(67531303, 'reachGoal', 'Perezvonite'); return true;">
         <input type="hidden" name="project_name" value="neon">
         <input type="hidden" name="admin_email" value="bags-reflective@mail.ru">
         <input type="hidden" name="form_subject" value="Запрос на консультацию | Рюкзаки">
@@ -502,7 +517,7 @@
       </button>
       <p class="modal__title title">оставьте свой <span>номер телефона</span></p>
       <p class="modal__desc">Менеджер свяжется с вами в ближайшее время и ответит на вопросы.</p>
-      <form action="#" class="modal__form form">
+      <form action="#" class="modal__form form" onsubmit="ym(67531303, 'reachGoal', 'zakaz_skidka'); return true;">
         <input type="hidden" name="project_name" value="neon">
         <input type="hidden" name="admin_email" value="bags-reflective@mail.ru">
         <input type="hidden" name="form_subject" value="Запрос на консультацию | Рюкзаки">
@@ -569,5 +584,6 @@
   </div>
   <script src="js/libs.js"></script>
   <script src="js/general.js"></script>
+
 </body>
 </html>
