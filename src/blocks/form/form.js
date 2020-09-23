@@ -1,5 +1,16 @@
 $(`form`).submit(function () { // Change
+
+  const check = document.querySelector(`#check`)
+
   const th = $(this);
+  const purse = $(`#form-purse-name`);
+  const price = $(`#form-purse-price`);
+
+  if(!check.checked) {
+    purse.remove();
+    price.remove();
+  }
+
   $.ajax({
     type: `POST`,
     url: `vendor/mail.php`, // Change

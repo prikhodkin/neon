@@ -83,8 +83,8 @@ const fillHiddenInputs = (item, randomPurse) => {
         <div id="hidden-inputs">
           <input type="hidden" name="Название товара" value="${item.name}">
           <input type="hidden" name="Цена продукта" value="${item.newprice}">
-          <input type="hidden" name="Название кошелька(доп. товар)" value="${randomPurse.name}">
-          <input type="hidden" name="Цена кошелька(доп. товар)" value="${randomPurse.newprice}">
+          <input type="hidden" id="form-purse-name" name="Название кошелька(доп. товар)" value="${randomPurse.name}">
+          <input type="hidden" id="form-purse-price" name="Цена кошелька(доп. товар)" value="${randomPurse.newprice}">
         </div>
       `
 }

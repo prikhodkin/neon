@@ -42,10 +42,6 @@ const openModal = function (target, modal, callback = () => {}) {
         });
       }
     }
-
-
-
-
     $(`.overlay`).fadeIn();
     $(modal).fadeIn();
     callback();
