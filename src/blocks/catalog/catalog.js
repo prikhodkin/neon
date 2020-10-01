@@ -24,7 +24,7 @@ const dataCard = (prod) => {
                         <img src="${it.img}" alt="${it.name}">
                     </a>
                     <a href="" class="products__name">${it.name}</a>
-                    <p class="products__info"><span>Размер кондиционеров:</span> ${it.size}</p>
+                    <p class="products__info"><span>Размер:</span> ${it.size}</p>
                     <p class="products__info"><span>Материал:</span> ${it.material}</p>
                     <div class="products__prices">
                         <span class="products__old-price">${it.oldprice} ₽ </span>

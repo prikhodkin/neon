@@ -42,6 +42,14 @@
   display: none;
   max-width: 205px;
   margin: 0 auto;
+  background: linear-gradient(180deg,#ffde8d 0,#fad26f 100%);
+  border: none;
+  transform: scale(1);
+  transition: all 0.3s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 
 .catalog__content {
