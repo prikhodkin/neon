@@ -104,7 +104,7 @@ const products = [
         "sale": false,
         "name": "Рюкзак большой №2",
         "oldprice": 3500,
-        "newprice": 2450,
+        "newprice": 2500,
         "img": "../img/products/BPbig2/productCard.png",
         "size": "32*24*14",
         "description": "Ортопедическая спинка и лямки. Два основных больших отделения, два карман один из них на молнии. Регулируемые лямки. Три вида рисунка.",
