@@ -17,6 +17,13 @@
   border-radius: 5px;
   cursor: pointer;
 
+  h2 {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #868ca5;
+  }
+
   &:not(:last-child) {
     margin-bottom: 12px;
   }
@@ -24,5 +31,9 @@
   &--active {
     color: #3b3640;
     background: linear-gradient(180deg, #ffde8d 0%, #fad26f 100%);
+
+    h2 {
+      color: #3b3640;
+    }
   }
 }

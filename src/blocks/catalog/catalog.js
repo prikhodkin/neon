@@ -16,19 +16,24 @@ const dataCard = (prod) => {
     return `<ul class="catalog__list catalog__list--hide">
         ${prod.map((it) => {
             return `
-                <li class="catalog__item products" data-id=${it.id}>
+                <li class="catalog__item products"  itemscope="" itemtype="http://schema.org/Product" data-id=${it.id}>
                     ${it.flag ?
                       `<span class='products__flag ${it.sale ? `products__flag--sale` : ``}'>${it.flag}</span>`
                       : ""}
-                    <a href="" class="products__img">
-                        <img src="${it.img}" alt="${it.name}">
+                    <a href=""  class="products__img">
+                        <img itemprop="image" src="${it.img}" alt="${it.name}">
                     </a>
-                    <a href="" class="products__name">${it.name}</a>
-                    <p class="products__info"><span>Размер:</span> ${it.size}</p>
-                    <p class="products__info"><span>Материал:</span> ${it.material}</p>
-                    <div class="products__prices">
-                        <span class="products__old-price">${it.oldprice} ₽ </span>
-                        <span class="products__price">${it.newprice} ₽ </span>
+                     <meta itemprop="name" content="${it.name}">
+                    <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+                      <h3 class="products__name">${it.name}</h3>
+                      <p class="products__info"><span>Размер:</span> ${it.size}</p>
+                      <p itemprop="description" class="products__info"><span>Материал:</span> ${it.material}</p>
+                      <div class="products__prices">
+                          <meta itemprop="price" content="${it.newprice}">
+                          <meta itemprop="priceCurrency" content="RUB">
+                          <span class="products__old-price">${it.oldprice} ₽ </span>
+                          <span class="products__price">${it.newprice} ₽ </span>
+                      </div>
                     </div>
                     <a href="" class="products__button button">
                         <div class="button__bg">Оформить заказ<br> со скидкой</div>
