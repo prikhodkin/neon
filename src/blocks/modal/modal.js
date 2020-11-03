@@ -5,10 +5,12 @@ const openModal = function (target, modal, callback = () => {}) {
   $(target).on(`click`, function (evt) {
     evt.preventDefault();
 
+
     const catalogItem = evt.target.closest(".catalog__item");
 
     if (catalogItem) {
       const modalI = evt.target.closest(".catalog__item").dataset.id;
+      console.log(modalI)
       fillModal(modalI);
       $("img.lazy").Lazy();
       $(`.slider__list`).slick({

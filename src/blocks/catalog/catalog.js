@@ -7,13 +7,17 @@ const CATEGORY = {
     all: true,
 };
 
-const dataBackPack = products.filter(it => it.category === CATEGORY.backpack);
-const dataBags = products.filter(it => it.category === CATEGORY.bags);
-const dataPurse = products.filter(it => it.category === CATEGORY.purse);
+// Создаем копию массива каталога и вырезаем первые 9 элементов (9 элементов прописаны напрямую в HTML)
+const newPr = products.slice();
+const upProducts = newPr.splice(9)
+
+const dataBackPack = upProducts.filter(it => it.category === CATEGORY.backpack);
+const dataBags = upProducts.filter(it => it.category === CATEGORY.bags);
+const dataPurse = upProducts.filter(it => it.category === CATEGORY.purse);
 
 const dataCard = (prod) => {
 
-    return `<ul class="catalog__list catalog__list--hide">
+    return `
         ${prod.map((it) => {
             return `
                 <li class="catalog__item products"  itemscope="" itemtype="http://schema.org/Product" data-id=${it.id}>
@@ -40,12 +44,11 @@ const dataCard = (prod) => {
                     </a>
                 </li>`
         }).join('')}
-            </ul>
-            <a href="" class="catalog__button more">Смотреть еще</a>`
+            `
 };
 
 
-document.querySelector(`[data-content="1"]`).insertAdjacentHTML('afterbegin', dataCard(dataBackPack));
-document.querySelector(`[data-content="2"]`).insertAdjacentHTML('afterbegin', dataCard(dataBags));
-document.querySelector(`[data-content="3"]`).insertAdjacentHTML('afterbegin', dataCard(dataPurse));
+document.querySelector(`[data-list="1"]`).insertAdjacentHTML('beforeend', dataCard(dataBackPack));
+document.querySelector(`[data-list="2"]`).insertAdjacentHTML('beforeend', dataCard(dataBags));
+document.querySelector(`[data-list="3"]`).insertAdjacentHTML('beforeend', dataCard(dataPurse));
 // document.querySelector(`[data-content="4"]`).insertAdjacentHTML('afterbegin', dataCard(products));
